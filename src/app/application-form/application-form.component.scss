@@ -1,0 +1,124 @@
+body {
+        display: block;
+        width: 100%;
+        min-height: 100%;
+        position: relative;
+   }
+    .process-container {
+        position: relative;
+        display: block;
+        flex-direction: column;
+        overflow: auto;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+   }
+    .panel {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        padding: 64px;
+        background-color:#3E50DB;
+        float: left;
+   }
+    .content {
+        padding: 28px 64px;
+        display: flex;
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-direction: column;
+        .title, .section-title {
+            font-weight: 600;
+            line-height: 1;
+            margin-bottom: 10px;
+       }
+        .full-width {
+            width:100%;
+       }
+        .col-4 {
+            text-align: center;
+       }
+   }
+    .submission {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: 16px;
+   }
+    .note {
+        background-color: #F3F4FE;
+        padding: 20px 24px;
+        margin: 0px 14px;
+   }
+    .img {
+        display: inline !important;
+        margin-right: 16px;
+        .fa-comments {
+            font-size: 24px;
+            color: #FFFFFF;
+       }
+   }
+    .title-note {
+        display: inline !important;
+   }
+    .note-text {
+        line-height: 2;
+        font-weight: 600;
+   }
+    .description {
+        display: block;
+        margin-left: 32px;
+        &-help {
+            display: inline !important;
+            color: #FFFFFF;
+            line-height: 2;
+            a {
+                color: #FFFFFF;
+           }
+       }
+   }
+    .hint {
+        padding: 16px;
+        background-color: #5562D2;
+   }
+    .counter {
+        background: #5764D4;
+        color: #C7CBDD;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        font-size: 24px;
+        padding: 10px;
+        &.active {
+            background: #C7CBDD;
+            color: #3E50DB;
+       }
+   }
+    .step {
+        display: flex;
+        margin-bottom: 16px;
+   }
+    .section {
+        padding: 20px;
+        font-size: 18px;
+        color: #5764D4;
+        &-active {
+            padding: 20px;
+            font-size: 18px;
+            color: #C7CBDD;
+       }
+   }
+    .steps-list {
+        margin-top: 64px;
+        margin-bottom: 24px;
+   }
+    @media screen and (max-width: 767px) {
+        .panel {
+            display: none;
+            visibility: hidden;
+       }
+   }
+    

@@ -1,0 +1,243 @@
+:host {
+  font-family: 'Muli', "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: auto;
+}
+.spacer {
+  flex: 1;
+}
+.toolbar {
+  height: 60px;
+  display: flex;
+  padding: 0 16px;
+  align-items: center;
+  justify-content: center;
+  background-color: #3E50DB;
+  color: white;
+  font-weight: 600;
+}
+a, a:visited, a:hover {
+  color: #ffffff;
+  text-decoration: none;
+  &.sort {
+      color: #6977F6;
+      text-decoration: underline;
+      margin: 0px 8px;
+ }
+}
+a:hover {
+  color: #6977F6;
+}
+footer {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+}
+footer a {
+  display: flex;
+  align-items: center;
+}
+.btn-primary {
+  background-color: #6977F6;
+  border: none !important;
+  margin-right: 24px;
+  font-size: 12px;
+  padding: 8px 24px;
+  &.search {
+      background-color: #ffffff;
+      margin-right: -6px;
+      padding: 8px 16px;
+      .fa-map-marker {
+          margin-right: 8px;
+          &::before {
+              color: #5057C0;
+         }
+     }
+ }
+  &.filter {
+      padding: 8px 16px;
+      background-color: #5667F6;
+      &-active {
+          background-color: #898EEC;
+          .fa-times {
+              margin-left: 8px;
+         }
+     }
+      .fa-angle-down {
+          margin-left: 6px;
+     }
+ }
+}
+.devider {
+  border-right: 1px solid #7c86a2;
+  height: 21px;
+  margin: 15px;
+  display: inline;
+  &.vertical {
+      margin: 0px 16px;
+ }
+}
+.sort-icon {
+  font-size: 16px;
+  color: #6977F6;
+  margin: 0px 8px;
+  cursor: pointer;
+}
+.tab {
+  &-list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+ }
+  &-section {
+      cursor: pointer;
+      float: left;
+      span {
+          padding: 0 24px;
+          .icon {
+              margin-left: 6px;
+         }
+     }
+ }
+}
+.header {
+  background-color: #3E50DB;
+}
+.search-panel {
+  text-align: center;
+  display: block;
+  .search {
+      margin-top: 24px;
+      color: #000000;
+      .search-input {
+          display: flex;
+          flex-direction: row;
+          align-items: baseline;
+          justify-content: center;
+     }
+ }
+  .filters {
+      margin-top: 24px;
+      padding-bottom: 32px;
+ }
+}
+.content {
+  padding: 32px 64px;
+}
+.result {
+  display: flex;
+}
+.subscription {
+  padding: 32px;
+  background-color: #3E50DB;
+  border-radius: 6px;
+  margin-bottom: 95px;
+  max-width: 395px;
+  display: block;
+  color: #ffffff;
+}
+h4 {
+  line-height: 2;
+  font-weight: 600;
+}
+.fa-fire {
+  margin-right: 16px;
+  margin-left: 4px;
+}
+.email-input {
+  color: #898EEC;
+  background-color: #3E50DB;
+  border: 1px solid #898EEC;
+  margin-bottom: 16px;
+  &::placeholder {
+      color: #898EEC;
+      opacity: 1;
+ }
+}
+.subscribe {
+  color: #6977F6;
+  background-color: #FFFFFF;
+  font-weight: 600;
+  padding: 10px 24px;
+  .fa-arrow-right {
+      margin-left: 24px;
+ }
+}
+@media screen and (max-width: 767px) {
+  .card:not(.highlight-card) {
+      margin: 8px 0;
+ }
+}
+.card {
+  max-width: 395px;
+  margin-bottom: 18px;
+  cursor: pointer;
+}
+.category {
+  background-color: #EFF1FD;
+  color: #6977F6;
+  margin-bottom: 24px;
+}
+mat-divider {
+  position: unset !important;
+  color: aqua;
+}
+.role {
+  font-size: 14px;
+  color: #6977F6;
+  .fa-user {
+      font-size: 16px;
+      margin-right: 8px 
+ }
+}
+.logo {
+  margin-bottom: 16px;
+  border-radius: 10px;
+  height: 60px;
+  width: 65px;
+}
+.active {
+  font-size: 28px;
+  float: right;
+  cursor: pointer;
+  color: #3E50DB;
+}
+.job-list {
+  margin-top: 16px;
+}
+.mat-card-actions {
+  padding: 12px;
+}
+.mat-card {
+  box-shadow: none !important;
+}
+.post {
+  float: right;
+  color: rgba(0,0,0,.54);
+}
+.form-control-inline-search {
+  border: none;
+  width: 500px;
+  padding: .2rem .75rem .42rem;
+}
+.search-input-wrapper {
+  display: flex;
+  flex-direction: row;
+  .fa-search {
+      color: #333333;
+      background-color: #ffffff;
+      padding: 11px 12px;
+      margin-left: -7px;
+      border-radius: 4px;
+ }
+}
+
+.job-item {
+  height: 360px
+}

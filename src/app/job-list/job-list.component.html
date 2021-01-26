@@ -1,0 +1,102 @@
+<div class="header" *ngIf="jobList">
+  <div class="toolbar" role="banner">
+    <img width="70" height="60" alt="Angular Logo" src="assets/img/Logo.png" />
+    <ul class="tab-list">
+      <li class="tab-section"><span>Open Jobs</span></li>
+      <li class="tab-section"> <span>Talents</span></li>
+      <li class="tab-section"><span>Resources<i class="icon fa fa-angle-down"></i></span></li>
+      <li class="tab-section"><span>Community<i class="icon fa fa-angle-down"></i></span></li>
+    </ul>
+    <div class="spacer"></div>
+    <button type="button" class="btn btn-primary">Post a job</button>
+    <a aria-label="Log in" href="#">Log in</a>
+    <div class="devider"></div>
+    <a aria-label="Sign up" href="#">Sign up</a>
+  </div>
+  <div class="search-panel">
+    <div class="row search">
+      <div class="col-12 search-input">
+        <button class="btn btn-primary search"><i class="fa fa-map-marker"></i>Anywhere</button>
+        <div class="search-wrapper">
+          <div class="search-input-wrapper">
+            <input type="text" class="form-control form-control-inline-search" />
+            <i class="fa fa-search"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="row filters">
+      <div class="col-12">
+        <button class="btn btn-primary filter">Gender</button>
+        <button class="btn btn-primary filter">Age range</button>
+        <button class="btn btn-primary filter">Skills</button>
+        <button class="btn btn-primary filter-active">Employment status - Full time<i
+            class="icon fa fa-times"></i></button>
+        <button class="btn btn-primary filter">Payment type</button>
+        <button class="btn btn-primary filter">More Filters<i class="icon fa fa-angle-down"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content" role="main">
+  <div class="result">
+    <span>{{jobList.length}} jobs found</span>
+    <div class="spacer"></div>
+    <span>Sort by:</span>
+    <span><a class="sort" href="#">Relevence</a><i class="icon fa fa-angle-down"></i></span>
+    <div class="devider vertical"></div>
+    <span class="sort-icon"><i class="fa fa-list"></i></span>
+    <span class="sort-icon"><i class="fa fa-th-large"></i></span>
+
+  </div>
+  <div class="row wrapper">
+    <div class="job-list row">
+      <div class="col-lg-4 col-sm-8 job-item" *ngFor="let job of jobList">
+        <div *ngIf="jobList.indexOf(job) === 2" class="subscription">
+          <div>
+            <h4><i class="fa fa-fire"></i>Save Job Alerts</h4>
+            <p>We will send you a letter if new opportunities appear matching you request</p>
+            <input type="email" placeholder="Add your email address"
+              class="email-input form-control form-control-inline" />
+            <button class="subscribe btn btn-primary">Subscribe <i class="fa fa-arrow-right"></i></button>
+          </div>
+        </div>
+        <div>
+          <mat-card class="card" (click)="navigateToApplication(job)">
+            <img class="logo" src="assets/img/Logo.png" />
+            <i class="fa fa-bookmark active"></i>
+            <mat-card-header>
+              <mat-card-title>{{job.name}}</mat-card-title>
+              <mat-card-subtitle>{{job.location}}</mat-card-subtitle>
+            </mat-card-header>
+            <div class="row">
+              <div class="col-12">
+                <button type="button" *ngFor="let category of job.categories"
+                  class="btn btn-primary category">{{category}}</button>
+              </div>
+            </div>
+            <mat-card-content>
+              <p>
+                {{job.description}}
+              </p>
+            </mat-card-content>
+            <mat-divider></mat-divider>
+            <mat-card-actions>
+              <span class="role"><i class="fa fa-user" style="color:#EFF1FD;"></i>{{job.numberOfRoles}} roles</span>
+              <span class="post"> {{job.datePosted}}</span>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+</div>
