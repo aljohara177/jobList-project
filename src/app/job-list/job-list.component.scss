@@ -173,6 +173,14 @@ h4 {
   .card:not(.highlight-card) {
       margin: 8px 0;
  }
+  .job-item {
+    min-height: 360px;
+    margin-bottom: 80px;
+  }
+
+  .subscription {
+    margin-bottom: 16px;
+  }
 }
 .card {
   max-width: 395px;
