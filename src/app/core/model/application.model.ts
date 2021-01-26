@@ -14,4 +14,5 @@ export interface Job {
     datePosted: string;
     numberOfRoles: number;
     categories: string[];
+    savedJob?: boolean;
 }

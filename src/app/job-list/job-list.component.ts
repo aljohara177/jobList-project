@@ -16,6 +16,7 @@ export class JobListComponent implements OnInit {
 
   ngOnInit() {
     this.jobApi.getJobs().subscribe(job => {
+      job['savedJob'] = false;
       this.jobList = job;
     })
   }

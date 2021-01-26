@@ -202,11 +202,15 @@ mat-divider {
   height: 60px;
   width: 65px;
 }
-.active {
+.fa-bookmark {
   font-size: 28px;
   float: right;
   cursor: pointer;
-  color: #3E50DB;
+  color: #EFF1FD;
+
+  &.active {
+    color: #3E50DB;
+  }
 }
 .job-list {
   margin-top: 16px;
